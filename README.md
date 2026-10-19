@@ -106,8 +106,13 @@
 ### Question 6: Query Map động
 
 - Requirement:
-- Solution:
+    - API:
+        - GET `/filters?color=red&size=M&brand=Nike`
+    - Dùng `@RequestParam Map<String, String>`
+
+- Solution: [Question 6](src/main/java/com/cybersoft/springboot/q6)
 - URL:
+    - GET: <http://localhost:8080/q6/filters?color=red&size=M&brand=Nike>
 
 ### Question 7: Form URL Encoded
 
@@ -123,8 +128,19 @@
 ### Question 8: Multipart + nhiều tham số
 
 - Requirement:
-- Solution:
-- URL:
+    - API:
+        - POST `/documents`
+        - Nhận:
+            - file
+            - title
+            - description
+            - tags (list)
+    - Dùng `MultipartFile` + `@RequestParam`
+- Solution: [Question 8](src/main/java/com/cybersoft/springboot/q8)
+- URL: <http://localhost:8080/q8/documents>
+    - Choice "Body" > "form-data"
+    - Enter "title", "description", "tags" (String)
+    - Enter "file" (File) and select a file
 
 ### Question 9: PUT cập nhật từng phần
 
