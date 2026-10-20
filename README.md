@@ -1,5 +1,9 @@
 # BC Java - Assignment 10 - Spring Boot
 
+![Status](https://img.shields.io/badge/status-completed-brightgreen)
+![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?logo=openjdk&logoColor=white)
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)
+
 <!-- TOC -->
 
 * [BC Java - Assignment 10 - Spring Boot](#bc-java---assignment-10---spring-boot)
@@ -39,7 +43,7 @@
 
     - Dùng `@PathVariable` + `@RequestParam`
 - Solution: [Question 1](src/main/java/com/cybersoft/springboot/q1)
-- URL: <http://localhost:8080/orders/101?currency=VND>
+- URL: <http://localhost:8080/q1/orders/101?currency=VND>
 
 ### Question 2: POST + Query + Body
 
@@ -83,20 +87,20 @@
 
 - Requirement:
     - API:
-        - GET /search?keyword=spring
+        - GET `/search?keyword=spring`
           Nếu không có page, size → mặc định page=0, size=10
     - Dùng `@RequestParam(defaultValue=...)`
 - Solution: [Question 4](src/main/java/com/cybersoft/springboot/q4)
 - URL:
-    - <http://localhost:8080/search?keyword=spring>
-    - <http://localhost:8080/search?keyword=spring&page=5>
-    - <http://localhost:8080/search?keyword=spring&page=5&size=20>
+    - <http://localhost:8080/q4/search?keyword=spring>
+    - <http://localhost:8080/q4/search?keyword=spring&page=5>
+    - <http://localhost:8080/q4/search?keyword=spring&page=5&size=20>
 
 ### Question 5: Nhận danh sách Query
 
 - Requirement:
     - API:
-        - GET /tags?tags=java,spring,boot
+        - GET `/tags?tags=java,spring,boot`
             - Trả về: `List<String>`
               `["java", "spring", "boot"]`
 - Solution: [Question 5](src/main/java/com/cybersoft/springboot/q5)
@@ -181,6 +185,72 @@
 ## Prerequisites
 
 ### Project Structure
+
+```text
+./
+│   .gitattributes
+│   .gitignore
+│   mvnw
+│   mvnw.cmd
+│   pom.xml
+│   README.md
+│
+├───.mvn
+│   └───wrapper
+│           maven-wrapper.properties
+│
+└───src
+    └───main
+        ├───java
+        │   └───com
+        │       └───cybersoft
+        │           └───springboot
+        │               │   SubmitBcJava10SpringBootApplication.java
+        │               │
+        │               ├───q1
+        │               │       Q1OrderController.java
+        │               │       Q1OrderService.java
+        │               │       Q1ResponseDTO.java
+        │               │
+        │               ├───q2
+        │               │       Q2Controller.java
+        │               │       Q2CreateDTO.java
+        │               │       Q2Service.java
+        │               │
+        │               ├───q3
+        │               │       Q3Controller.java
+        │               │
+        │               ├───q4
+        │               │       Q4Controller.java
+        │               │       Q4ResponseDTO.java
+        │               │
+        │               ├───q5
+        │               │       Q5Controller.java
+        │               │       Q5Service.java
+        │               │
+        │               ├───q6
+        │               │       Q6Controller.java
+        │               │
+        │               ├───q7
+        │               │       Q7Controller.java
+        │               │
+        │               ├───q8
+        │               │       Q8Controller.java
+        │               │       Q8Response.java
+        │               │       Q8Service.java
+        │               │       Q8UploadFileDTO.java
+        │               │
+        │               ├───q9
+        │               │       Q9Controller.java
+        │               │       Q9Service.java
+        │               │       Q9UpdateDTO.java
+        │               │       User.java
+        │               └───q10
+        │                       Q10Controller.java
+        │
+        └───resources
+            └───application.properties
+```
 
 ### Environment
 
